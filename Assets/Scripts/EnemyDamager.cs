@@ -12,6 +12,8 @@ public class EnemyDamager : MonoBehaviour
 
     public bool shouldKnockBack;
 
+    public bool destroyParent;
+
     void Start()
     {
         //Destroy(gameObject, lifeTime);
@@ -33,6 +35,11 @@ public class EnemyDamager : MonoBehaviour
             if (transform.localScale.x == 0f)
             {
                 Destroy(gameObject);
+
+                if (destroyParent)
+                {
+                    Destroy(transform.parent.gameObject);
+                }
             }
         }
     }
