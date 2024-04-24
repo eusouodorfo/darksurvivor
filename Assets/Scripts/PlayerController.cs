@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
+    public float pickupRange = 1.5f;
+
     private void Awake()
     {
         instance = this;
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         transform.position += moveInput * moveSpeed * Time.deltaTime;
 
-        if(moveInput != Vector3.zero)
+        if (moveInput != Vector3.zero)
         {
             anim.SetBool("isMoving", true);
         }
