@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     public float health = 5f;
     public float knockBackTime = .5f;
     private float knockBackCounter;
+    public int expToGive = 1;
 
     void Start()
     {
@@ -64,6 +65,8 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+
+            ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
         }
 
         DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);
