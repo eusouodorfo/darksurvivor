@@ -481,10 +481,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a2817cb8bea7c4ab9456b78204e841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: -360
+  stats:
+  - speed: 1
+    damage: 5
+    range: 3
+    timeBetweenAttacks: 8
+    amount: 1
+    duration: 7
+  - speed: 10
+    damage: 30
+    range: 5
+    timeBetweenAttacks: 8
+    amount: 3
+    duration: 10
+  - speed: 20
+    damage: 60
+    range: 8
+    timeBetweenAttacks: 8
+    amount: 5
+    duration: 15
+  weaponLevel: 0
+  statsUpdated: 0
+  rotateSpeed: -180
   holder: {fileID: 1158662226}
   fireballToSpawn: {fileID: 2040200240}
   timeBetweenSpawn: 4
+  damager: {fileID: 235589985}
 --- !u!1 &109577583
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a39ede6201b3840a042c9c5e5cc657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 10
+  damageAmount: 1
   lifeTime: 3
   growSpeed: 5
   shouldKnockBack: 1
@@ -945,6 +967,7 @@ MonoBehaviour:
   pickupRange: 1.25
   moveSpeed: 2
   anim: {fileID: 492524826}
+  activeWeapon: {fileID: 108313353}
 --- !u!95 &492524826
 Animator:
   serializedVersion: 5
@@ -80286,3 +80309,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explvlSlider: {fileID: 1472445375}
   expLvlText: {fileID: 39504551}
+  percentage: 0

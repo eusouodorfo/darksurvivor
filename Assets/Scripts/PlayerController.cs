@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Animator anim;
 
+    public Weapon activeWeapon;
+
     void Update()
     {
         Vector3 moveInput = new Vector3(0f, 0f, 0f);
