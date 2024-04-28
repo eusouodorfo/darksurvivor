@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpinWeapon : Weapon
@@ -13,6 +14,8 @@ public class SpinWeapon : Weapon
     void Start()
     {
         SetStats();
+
+        //UIController.instance.levelUpButtons[0].UpdateButtonDisplay(this);
     }
 
 

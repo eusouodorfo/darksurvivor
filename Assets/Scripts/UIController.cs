@@ -18,6 +18,10 @@ public class UIController : MonoBehaviour
     public TMP_Text expLvlText;
     public float percentage;
 
+    public LevelUpSelectionButton[] levelUpButtons;
+
+    public GameObject levelUpPanel;
+
     void Start()
     {
 
