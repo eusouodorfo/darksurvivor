@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class ProjectileWeapon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public float moveSpeed;
+
     void Update()
     {
-        
+        transform.position += transform.up * moveSpeed * Time.deltaTime;
     }
 }
