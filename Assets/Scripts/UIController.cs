@@ -39,4 +39,10 @@ public class UIController : MonoBehaviour
         percentage = (currentExp * 100) / levelExp;
         expLvlText.text = percentage.ToString() + "%";
     }
+
+    public void SkipLevelUp()
+    {
+        levelUpPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
 }
