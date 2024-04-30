@@ -20,6 +20,8 @@ public class EnemyDamager : MonoBehaviour
 
     private List<EnemyController> enemiesInRange = new List<EnemyController>();
 
+    public bool destroyOnImpact;
+
     void Start()
     {
         //Destroy(gameObject, lifeTime);
@@ -80,6 +82,11 @@ public class EnemyDamager : MonoBehaviour
             if (collision.tag == "Enemy")
             {
                 collision.GetComponent<EnemyController>().TakeDamage(damageAmount, shouldKnockBack);
+
+                if (destroyOnImpact)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
         else
