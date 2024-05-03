@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5145764228525325616}
   - component: {fileID: 5145764228525325618}
   - component: {fileID: 5145764228525325621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy  04 - Esqueleto
   m_TagString: Enemy
   m_Icon: {fileID: 0}

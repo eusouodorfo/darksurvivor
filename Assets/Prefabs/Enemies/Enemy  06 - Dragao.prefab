@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2979650621074807979}
   - component: {fileID: 2979650621074807977}
   - component: {fileID: 2979650621074807982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy  06 - Dragao
   m_TagString: Enemy
   m_Icon: {fileID: 0}

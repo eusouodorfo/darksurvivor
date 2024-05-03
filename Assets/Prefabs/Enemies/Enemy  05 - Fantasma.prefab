@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3385774985198671341}
   - component: {fileID: 3385774985198671343}
   - component: {fileID: 3385774985198671336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy  05 - Fantasma
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8532551105180266907}
   - component: {fileID: 8532551105180266905}
   - component: {fileID: 8532551105180266910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy  02 - Lobo Azul
   m_TagString: Enemy
   m_Icon: {fileID: 0}

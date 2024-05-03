@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8102003127305300264}
   - component: {fileID: 8102003127305300266}
   - component: {fileID: 8102003127305300269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy  03 - Amoeba
   m_TagString: Enemy
   m_Icon: {fileID: 0}
