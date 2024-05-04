@@ -911,7 +911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentExperience: 0
   pickup: {fileID: 5299999766634636982, guid: e3b1497c175b06545893ee97e8e6d396, type: 3}
-  expLevels: 3c000000
+  expLevels: 64000000
   currentLevel: 1
   levelCount: 100
   weaponsToUpgrade: []
