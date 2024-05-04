@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour
     public float knockBackTime = .5f;
     private float knockBackCounter;
     public int expToGive = 1;
+    public int coinValue = 1;
+    public float coinDropRate = 0.5f;
 
     void Start()
     {
@@ -74,6 +76,11 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
 
             ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
+
+            if (Random.value <= coinDropRate)
+            {
+                CoinController.instance.DropCoin(transform.position, coinValue);
+            }
         }
 
         DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);
