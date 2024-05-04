@@ -24,6 +24,8 @@ public class UIController : MonoBehaviour
 
     public TMP_Text cointText;
 
+    public PlayerStatUpgradeDisplay moveSpeedUpgradeDisplay, healthUpgradeDisplay, pickupRangeUpgradeDisplay, maxWeaponsUpgradeDisplay;
+
     void Start()
     {
 
