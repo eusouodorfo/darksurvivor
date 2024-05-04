@@ -24,27 +24,34 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (knockBackCounter > 0)
+        if (PlayerController.instance.gameObject.activeSelf == true)
         {
-            knockBackCounter -= Time.deltaTime;
-
-            if (moveSpeed > 0)
+            if (knockBackCounter > 0)
             {
-                moveSpeed = -moveSpeed * 2f;
+                knockBackCounter -= Time.deltaTime;
+
+                if (moveSpeed > 0)
+                {
+                    moveSpeed = -moveSpeed * 2f;
+                }
+
+                if (knockBackCounter <= 0)
+                {
+                    moveSpeed = Mathf.Abs(moveSpeed * .5f);
+                }
+
             }
 
-            if (knockBackCounter <= 0)
-            {
-                moveSpeed = Mathf.Abs(moveSpeed * .5f);
-            }
+            theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
 
+            if (hitCounter > 0f)
+            {
+                hitCounter -= Time.deltaTime;
+            }
         }
-
-        theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
-
-        if (hitCounter > 0f)
+        else
         {
-            hitCounter -= Time.deltaTime;
+            theRB.velocity = Vector2.zero;
         }
     }
 
