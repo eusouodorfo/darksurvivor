@@ -93,6 +93,8 @@ MonoBehaviour:
   health: 10
   knockBackTime: 0.5
   expToGive: 30
+  coinValue: 1000
+  coinDropRate: 0.5
 --- !u!114 &3385774985198671336
 MonoBehaviour:
   m_ObjectHideFlags: 0

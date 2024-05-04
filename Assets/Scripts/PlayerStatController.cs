@@ -86,6 +86,43 @@ public class PlayerStatController : MonoBehaviour
             UIController.instance.maxWeaponsUpgradeDisplay.ShowMaxLevel();
         }
     }
+
+    public void PurchaseMoveSpeed()
+    {
+        moveSpeedLevel++;
+        CoinController.instance.SpendCoins(moveSpeed[moveSpeedLevel].cost);
+        UpdateDisplay();
+
+        PlayerController.instance.moveSpeed = moveSpeed[moveSpeedLevel].value;
+    }
+
+    public void PurchaseHealth()
+    {
+        healthLevel++;
+        CoinController.instance.SpendCoins(health[healthLevel].cost);
+        UpdateDisplay();
+
+        PlayerHealthController.instance.maxHealth = health[healthLevel].value;
+        PlayerHealthController.instance.currentHealth += health[healthLevel].value - health[healthLevel - 1].value;
+    }
+
+    public void PurchasePickupRange()
+    {
+        pickupRangeLevel++;
+        CoinController.instance.SpendCoins(pickupRange[pickupRangeLevel].cost);
+        UpdateDisplay();
+
+        PlayerController.instance.pickupRange = pickupRange[pickupRangeLevel].value;
+    }
+
+    public void PurchaseMaxWeapon()
+    {
+        maxWeaponsLevel++;
+        CoinController.instance.SpendCoins(maxWeapons[maxWeaponsLevel].cost);
+        UpdateDisplay();
+
+        PlayerController.instance.maxWeapons = Mathf.RoundToInt(maxWeapons[maxWeaponsLevel].value);
+    }
 }
 
 [System.Serializable]
