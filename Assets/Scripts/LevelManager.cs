@@ -32,5 +32,7 @@ public class LevelManager : MonoBehaviour
     public void EndLevel()
     {
         gameActive = false;
+
+        UIController.instance.levelEndScreen.SetActive(true);
     }
 }
